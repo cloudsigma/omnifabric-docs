@@ -1,0 +1,13 @@
+.idea/
+*.swp
+*.output
+**/.DS_Store
+.vscode
+*.iml
+tags
+nohup.out
+site
+node_modules
+venv/
+.venv/
+.env

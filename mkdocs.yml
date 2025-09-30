@@ -1,0 +1,651 @@
+site_name: OmniFabric Docs
+repo_name: cloudsigma/omnifabric-docs
+repo_url: https://github.com/cloudsigma/omnifabric-docs
+theme: readthedocs
+# theme:
+#   name: material
+#   logo: assets/new-logo.png
+#   features:
+#     - content.code.copy
+#     - content.action.edit
+#     - navigation.instant
+#     - navigation.tracking
+#     - navigation.tabs
+#     - navigation.tabs.sticky
+#     - navigation.footer
+#   palette:
+#     scheme: mo
+#   font:
+#     text: Ubuntu
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+edit_uri: edit/main/docs/
+# extra_css:
+#   - stylesheets/extra.css
+# extra_javascript:
+#   - javascripts/extra.js
+# extra:
+#   homepage: https://www.OmniFabric.io
+#   version:
+#     provider: mike
+#   alternate:
+#     - name: English
+#       link: /en/
+#       lang: en
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+nav:
+  - OmniFabric:
+    - Home: README.md
+    - Overview:
+      - OmniFabric Introduction: OmniFabric/Overview/omnifabric-introduction.md
+      - OmniFabric Feature List: OmniFabric/Overview/omnifabric-feature-list.md
+      - OmniFabric Feature:
+        - Feature Overview: OmniFabric/Overview/feature/feature-overview.md
+        - HTAP: OmniFabric/Overview/feature/key-feature-htap.md
+        - Multi-Account: OmniFabric/Overview/feature/key-feature-multi-accounts.md
+        - Scalability: OmniFabric/Overview/feature/scalability.md
+        - Cost-Effective: OmniFabric/Overview/feature/cost-effective.md
+        - High Availability: OmniFabric/Overview/feature/high-availability.md
+        - Timing: OmniFabric/Overview/feature/time-series.md
+        - Streams: OmniFabric/Overview/feature/stream.md
+        - User-defined functions: OmniFabric/Overview/feature/udf.md
+        - MySQL Compatibility: OmniFabric/Overview/feature/mysql-compatibility.md
+      - OmniFabric vs Other Databases:
+        - OmniFabric vs OLTP: OmniFabric/Overview/OmniFabric-vs-other_databases/omnifabric-vs-oltp.md
+      - What's New: OmniFabric/Overview/whats-new.md
+    - Getting Started:
+      - Basic SQL: OmniFabric/Get-Started/basic-sql.md
+    - Develop:
+      - Overview: OmniFabric/Develop/develop-overview.md
+      - Ecological Tools:
+        - BI Connection:
+          - FineBI Connection: OmniFabric/Develop/Ecological-Tools/BI-Connection/FineBI-connection.md
+          - Superset Connection: OmniFabric/Develop/Ecological-Tools/BI-Connection/Superset-connection.md
+          - Yonghong Connection: OmniFabric/Develop/Ecological-Tools/BI-Connection/yonghong-connection.md
+        - Computing Engine:
+          - Flink:
+            - Flink Overview: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-overview.md
+            - Flink Kafka: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-kafka-omnifabric.md
+            - Flink MongoDB: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-mongo-omnifabric.md
+            - Flink MySQL: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-mysql-omnifabric.md
+            - Flink Oracle: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-oracle-omnifabric.md
+            - Flink PostgreSQL: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-postgresql-omnifabric.md
+            - Flink SQL Server: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-sqlserver-omnifabric.md
+            - Flink TiDB: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Flink/flink-tidb-omnifabric.md
+          - Spark:
+            - Spark Overview: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Spark/spark-overview.md
+            - Spark Doris: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Spark/spark-doris-omnifabric.md
+            - Spark Hive: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Spark/spark-hive-omnifabric.md
+            - Spark MySQL: OmniFabric/Develop/Ecological-Tools/Computing-Engine/Spark/spark-mysql-omnifabric.md
+        - ETL:
+          - DataX:
+            - DataX Overview: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-overview.md
+            - DataX ClickHouse: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-clickhouse-omnifabric.md
+            - DataX Doris: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-doris-omnifabric.md
+            - DataX Elasticsearch: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-elasticsearch-omnifabric.md
+            - DataX InfluxDB: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-influxdb-omnifabric.md
+            - DataX MongoDB: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-mongodb-omnifabric.md
+            - DataX MySQL: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-mysql-omnifabric.md
+            - DataX Oracle: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-oracle-omnifabric.md
+            - DataX PostgreSQL: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-postgresql-omnifabric.md
+            - DataX SQL Server: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-sqlserver-omnifabric.md
+            - DataX TiDB: OmniFabric/Develop/Ecological-Tools/Etl/DataX/datax-tidb-omnifabric.md
+          - Seatunnel:
+            - Seatunnel Overview: OmniFabric/Develop/Ecological-Tools/Etl/Seatunnel/seatunnel-overview.md
+            - Seatunnel MySQL: OmniFabric/Develop/Ecological-Tools/Etl/Seatunnel/seatunnel-mysql-omnifabric.md
+            - Seatunnel Oracle: OmniFabric/Develop/Ecological-Tools/Etl/Seatunnel/seatunnel-oracle-omnifabric.md
+        - Scheduling Tools:
+          - DolphinScheduler: OmniFabric/Develop/Ecological-Tools/Scheduling-Tools/dolphinScheduler.md
+      - Connect to OmniFabric:
+        - Overview: OmniFabric/Develop/connect-mo/configure-mo-ssl-connection.md
+        - Java:
+          - JDBC: OmniFabric/Develop/connect-mo/java-connect-to-omnifabric/connect-mo-with-jdbc.md
+          - ORM: OmniFabric/Develop/connect-mo/java-connect-to-omnifabric/connect-mo-with-orm.md
+        - Python: OmniFabric/Develop/connect-mo/python-connect-to-omnifabric.md
+        - Go: OmniFabric/Develop/connect-mo/connect-to-omnifabric-with-go.md
+        - C#: OmniFabric/Develop/connect-mo/connect-to-omnifabric-with-c#.md
+        - Database Client Tools: OmniFabric/Develop/connect-mo/database-client-tools.md
+      - Data Operations:
+        - Import Data:
+          - Overview: OmniFabric/Develop/import-data/bulk-load/bulk-load-overview.md
+          - Insert: OmniFabric/Develop/import-data/insert-data.md
+          - Update: OmniFabric/Develop/import-data/update-data.md
+          - Delete: OmniFabric/Develop/import-data/delete-data.md
+          - Prepared Statements: OmniFabric/Develop/import-data/prepared.md
+          - Bulk Load:
+            - CSV: OmniFabric/Develop/import-data/bulk-load/load-csv.md
+            - JSON Lines: OmniFabric/Develop/import-data/bulk-load/load-jsonline.md
+            - S3: OmniFabric/Develop/import-data/bulk-load/load-s3.md
+            - Using Source: OmniFabric/Develop/import-data/bulk-load/using-source.md
+        - Export Data:
+          - Modump: OmniFabric/Develop/export-data/modump.md
+          - Select Into Outfile: OmniFabric/Develop/export-data/select-into-outfile.md
+        - Read Data:
+          - Single Table: OmniFabric/Develop/read-data/query-data-single-table.md
+          - Multi-table Joins: OmniFabric/Develop/read-data/multitable-join-query.md
+          - Subqueries: OmniFabric/Develop/read-data/subquery.md
+          - Views: OmniFabric/Develop/read-data/views.md
+          - CTE: OmniFabric/Develop/read-data/cte.md
+          - Window Functions:
+            - Overview: OmniFabric/Develop/read-data/window-function/window-function.md
+            - Time Window: OmniFabric/Develop/read-data/window-function/time-window.md
+        - Distinct Data:
+          - Bitmap: OmniFabric/Develop/distinct-data/bitmap.md
+          - Count Distinct: OmniFabric/Develop/distinct-data/count-distinct.md
+      - Schema Design:
+        - Overview: OmniFabric/Develop/schema-design/overview.md
+        - Create Database: OmniFabric/Develop/schema-design/create-database.md
+        - Create Table: OmniFabric/Develop/schema-design/create-table.md
+        - Create Table AS SELECT: OmniFabric/Develop/schema-design/create-table-as-select.md
+        - Create Temporary Table: OmniFabric/Develop/schema-design/create-temporary-table.md
+        - Create View: OmniFabric/Develop/schema-design/create-view.md
+        - Create Secondary Index: OmniFabric/Develop/schema-design/create-secondary-index.md
+        - Vector: OmniFabric/Develop/schema-design/vector.md
+        - Data Integrity:
+          - Overview: OmniFabric/Develop/schema-design/data-integrity/overview-of-integrity-constraint-types.md
+          - Primary Key: OmniFabric/Develop/schema-design/data-integrity/primary-key-constraints.md
+          - Foreign Key: OmniFabric/Develop/schema-design/data-integrity/foreign-key-constraints.md
+          - Unique Key: OmniFabric/Develop/schema-design/data-integrity/unique-key-constraints.md
+          - Not Null: OmniFabric/Develop/schema-design/data-integrity/not-null-constraints.md
+          - Auto Increment: OmniFabric/Develop/schema-design/data-integrity/auto-increment-integrity.md
+      - Transactions:
+        - Overview: OmniFabric/Develop/Transactions/common-transaction-overview.md
+        - OmniFabric Transactions:
+          - Overview: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/overview.md
+          - Explicit: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/explicit-transaction.md
+          - Implicit: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/implicit-transaction.md
+          - How to Use: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/how-to-use.md
+          - Isolation Level: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/isolation-level.md
+          - MVCC: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/mvcc.md
+          - Optimistic: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/optimistic-transaction.md
+          - Pessimistic: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/pessimistic-transaction.md
+          - Scenario: OmniFabric/Develop/Transactions/omnifabric-transaction-overview/scenario.md
+      - Vector:
+        - Vector Type: OmniFabric/Develop/Vector/vector_type.md
+        - Vector Search: OmniFabric/Develop/Vector/vector_search.md
+        - Cluster Centers: OmniFabric/Develop/Vector/cluster_centers.md
+      - UDF:
+        - Python UDF: OmniFabric/Develop/udf/udf-python.md
+        - Python UDF Advanced: OmniFabric/Develop/udf/udf-python-advanced.md
+      - Publish-Subscribe:
+        - Overview: OmniFabric/Develop/Publish-Subscribe/pub-sub-overview.md
+        - Multi-Account Overview: OmniFabric/Develop/Publish-Subscribe/multi-account-overview.md
+    - Performance Tuning:
+      - Performance Tuning Overview: OmniFabric/Performance-Tuning/performance-tuning-overview.md
+      - Control Execution Plan:
+        - Optimizer Hints: OmniFabric/Performance-Tuning/control-execution-plan/optimizer-hints.md
+      - Explain:
+        - Explain Overview: OmniFabric/Performance-Tuning/explain/explain-overview.md
+        - Explain Aggregation: OmniFabric/Performance-Tuning/explain/explain-aggregation.md
+        - Explain Joins: OmniFabric/Performance-Tuning/explain/explain-joins.md
+        - Explain Subqueries: OmniFabric/Performance-Tuning/explain/explain-subqueries.md
+        - Explain Views: OmniFabric/Performance-Tuning/explain/explain-views.md
+        - Explain Walkthrough: OmniFabric/Performance-Tuning/explain/explain-walkthrough.md
+      - Optimization Concepts:
+        - Through Partition Pruning: OmniFabric/Performance-Tuning/optimization-concepts/1.1-through-partition-pruning.md
+        - Through Cluster By: OmniFabric/Performance-Tuning/optimization-concepts/through-cluster-by.md
+        - Through Partition By: OmniFabric/Performance-Tuning/optimization-concepts/through-partition-by.md
+    - Migrate:
+      - Overview: OmniFabric/Migrate/migrate-overview.md
+      - Migrate from MySQL: OmniFabric/Migrate/migrate-from-mysql-to-omnifabric.md
+      - Migrate from Oracle: OmniFabric/Migrate/migrate-from-oracle-to-omnifabric.md
+      - Migrate from SQL Server: OmniFabric/Migrate/migrate-from-sqlserver-to-omnifabric.md
+      - Migrate from PostgreSQL: OmniFabric/Migrate/migrate-from-postgresql-to-omnifabric.md
+    - Reference:
+      - System Variables:
+        - System Variables Overview: OmniFabric/Reference/Variable/system-variables/system-variables-overview.md
+        - System Variables parameters:
+          - SQL Mode: OmniFabric/Reference/Variable/system-variables/sql-mode.md
+          - Save query result support: OmniFabric/Reference/Variable/system-variables/save_query_result.md
+          - Timezone support: OmniFabric/Reference/Variable/system-variables/timezone.md
+          - Lower case table names support: OmniFabric/Reference/Variable/system-variables/lower_case_tables_name.md
+          - Foreign key checking support: OmniFabric/Reference/Variable/system-variables/foreign_key_checks.md
+          - User-specified case consistency support for query result set column names: OmniFabric/Reference/Variable/system-variables/keep_user_target_list_in_result.md
+          - Invalid Login Restrictions: OmniFabric/Reference/Variable/system-variables/invalid_login_restrictions.md
+          - Password complexity verification: OmniFabric/Reference/Variable/system-variables/password_complex.md
+          - Connection whitelist: OmniFabric/Reference/Variable/system-variables/whitelist.md
+        - Custom variables: OmniFabric/Reference/Variable/custom-variable.md
+      - SQL Language Structure:
+        - Keywords: OmniFabric/Reference/Language-Structure/keywords.md
+        - Comments: OmniFabric/Reference/Language-Structure/comment.md
+      - Data Types:
+        - Data Types Overview: OmniFabric/Reference/Data-Types/data-types.md
+        - Data Type Conversion: OmniFabric/Reference/Data-Types/data-type-conversion.md
+        - Date and Time Types:
+          - Timestamp Initialization: OmniFabric/Reference/Data-Types/date-time-data-types/timestamp-initialization.md
+          - YEAR Type: OmniFabric/Reference/Data-Types/date-time-data-types/year-type.md
+        - JSON Data Type: OmniFabric/Reference/Data-Types/json-type.md
+        - BLOB and TEXT Type: OmniFabric/Reference/Data-Types/blob-text-type.md
+        - DATALINK Type: OmniFabric/Reference/Data-Types/datalink-type.md
+        - ENUM Type: OmniFabric/Reference/Data-Types/enum-type.md
+        - UUID Type: OmniFabric/Reference/Data-Types/uuid-type.md
+        - Vector Type: OmniFabric/Reference/Data-Types/vector-type.md
+        - Fixed-Point Types (Exact Value) - DECIMAL: OmniFabric/Reference/Data-Types/fixed-point-types.md
+      - SQL Statements:
+        - Type of SQL Statements: OmniFabric/Reference/SQL-Reference/SQL-Type.md
+        - Data Definition Language:
+          - DDL Overview: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/ddl-overview.md
+          - CREATE DATABASE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-database.md
+          - CREATE INDEX: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-index.md
+          - CREATE INDEX...USING IVFFLAT: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-index-ivfflat.md
+          - CREATE FULLTEXT INDEX: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-fulltext-index.md
+          - CREATE TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-table.md
+          - CREATE TABLE AS SELECT: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-table-as-select.md
+          - CREATE TABLE ... LIKE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-table-like.md
+          - CREATE EXTERNAL TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-external-table.md
+          - CREATE CLUSTER TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-cluster-table.md
+          - CREATE DYNAMIC TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-dynamic-table.md
+          - CREATE FUNCTION (Python): OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-function-python.md
+          - CREATE FUNCTION (SQL): OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-function-sql.md
+          - CREATE PITR: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-pitr.md
+          - CREATE PUBLICATION: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-publication.md
+          - CREATE SEQUENCE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-sequence.md
+          - CREATE SNAPSHOT: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-snapshot.md
+          - CREATE SOURCE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-source.md
+          - CREATE STAGE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-stage.md
+          - CREATE SUBSCRIPTION: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-subscription.md
+          - CREATE VIEW: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/create-view.md
+          - DROP DATABASE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-database.md
+          - DROP INDEX: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-index.md
+          - DROP TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-table.md
+          - DROP PITR: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-pitr.md
+          - DROP PUBLICATION: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-publication.md
+          - DROP SEQUENCE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-sequence.md
+          - DROP STAGE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-stage.md
+          - DROP SNAPSHOT: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-snapshot.md
+          - DROP VIEW: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-view.md
+          - DROP FUNCTION: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/drop-function.md
+          - ALTER PITR: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-pitr.md
+          - ALTER PUBLICATION: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-publication.md
+          - ALTER REINDEX: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-reindex.md
+          - ALTER SEQUENCE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-sequence.md
+          - ALTER STAGE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-stage.md
+          - ALTER TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-table.md
+          - ALTER VIEW: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/alter-view.md
+          - TRUNCATE TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/truncate-table.md
+          - RENAME TABLE: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/rename-table.md
+          - RESTORE PITR: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/restore-pitr.md
+          - RESTORE SNAPSHOT: OmniFabric/Reference/SQL-Reference/Data-Definition-Language/restore-snapshot.md
+        - Data Manipulation Language:
+          - INSERT: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/insert.md
+          - INSERT INTO SELECT: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/insert-into-select.md
+          - DELETE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/delete.md
+          - UPDATE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/update.md
+          - LOAD DATA INFILE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/load-data-infile.md
+          - LOAD DATA INLINE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/load-data-inline.md
+          - CASE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/case.md
+          - REPLACE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/replace.md
+          - UPSERT:
+            - UPSERT Overview: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/upsert/upsert.md
+            - INSERT ON DUPLICATE KEY UPDATE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/upsert/insert-on-duplicate.md
+            - INSERT IGNORE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/upsert/insert-ignore.md
+            - REPLACE: OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/upsert/replace.md
+          - Information Functions:
+            - LAST_QUERY_ID(): OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/information-functions/last-query-id.md
+            - LAST_INSERT_ID(): OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/information-functions/last-insert-id.md
+            - CURRENT_ROLE(): OmniFabric/Reference/SQL-Reference/Data-Manipulation-Language/information-functions/current_role.md
+        - Data Query Language:
+          - APPLY:
+            - CROSS APPLY: OmniFabric/Reference/SQL-Reference/Data-Query-Language/apply/cross-apply.md
+            - OUTER APPLY: OmniFabric/Reference/SQL-Reference/Data-Query-Language/apply/outer-apply.md
+          - JOIN:
+            - JOIN Overview: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/join.md
+            - CROSS JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/cross-join.md
+            - INNER JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/inner-join.md
+            - LEFT JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/left-join.md
+            - RIGHT JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/right-join.md
+            - FULL JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/full-join.md
+            - OUTER JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/outer-join.md
+            - NATURAL JOIN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/join/natural-join.md
+          - SELECT: OmniFabric/Reference/SQL-Reference/Data-Query-Language/select.md
+          - SUBQUERY:
+            - SUBQUERY Overview: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/subquery.md
+            - Derived Tables: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/derived-tables.md
+            - Comparisons Using Subqueries: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/comparisons-using-subqueries.md
+            - SUBQUERY with ANY or SOME: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/subquery-with-any-some.md
+            - SUBQUERY with ALL: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/subquery-with-all.md
+            - SUBQUERY with EXISTS: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/subquery-with-exists.md
+            - SUBQUERY with IN: OmniFabric/Reference/SQL-Reference/Data-Query-Language/subqueries/subquery-with-in.md
+          - With CTE: OmniFabric/Reference/SQL-Reference/Data-Query-Language/with-cte.md
+          - Combining Queries:
+            - Combining Queries Overview: OmniFabric/Reference/SQL-Reference/Data-Query-Language/union-intersect-minus-overview.md
+            - UNION: OmniFabric/Reference/SQL-Reference/Data-Query-Language/union.md
+            - INTERSECT: OmniFabric/Reference/SQL-Reference/Data-Query-Language/intersect.md
+            - MINUS: OmniFabric/Reference/SQL-Reference/Data-Query-Language/minus.md
+        - Data Control Language:
+          - CREATE ACCOUNT: OmniFabric/Reference/SQL-Reference/Data-Control-Language/create-account.md
+          - ALTER ACCOUNT: OmniFabric/Reference/SQL-Reference/Data-Control-Language/alter-account.md
+          - CREATE ROLE: OmniFabric/Reference/SQL-Reference/Data-Control-Language/create-role.md
+          - CREATE USER: OmniFabric/Reference/SQL-Reference/Data-Control-Language/create-user.md
+          - ALTER USER: OmniFabric/Reference/SQL-Reference/Data-Control-Language/alter-user.md
+          - DROP ACCOUNT: OmniFabric/Reference/SQL-Reference/Data-Control-Language/drop-account.md
+          - DROP USER: OmniFabric/Reference/SQL-Reference/Data-Control-Language/drop-user.md
+          - DROP ROLE: OmniFabric/Reference/SQL-Reference/Data-Control-Language/drop-role.md
+          - GRANT: OmniFabric/Reference/SQL-Reference/Data-Control-Language/grant.md
+          - REVOKE: OmniFabric/Reference/SQL-Reference/Data-Control-Language/revoke.md
+        - Other:
+          - SHOW:
+            - SHOW Statements Overview: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-statements-overview.md
+            - SHOW ACCOUNTS: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-account.md
+            - SHOW DATABASES: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-databases.md
+            - SHOW CREATE TABLE: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-create-table.md
+            - SHOW CREATE VIEW: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-create-view.md
+            - SHOW CREATE PUBLICATION: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-create-publication.md
+            - SHOW TABLES: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-tables.md
+            - SHOW INDEX: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-index.md
+            - SHOW COLLATION: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-collation.md
+            - SHOW COLUMNS: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-columns.md
+            - SHOW FUNCTION STATUS: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-function-status.md
+            - SHOW GRANT: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-grants.md
+            - SHOW PROCESSLIST: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-processlist.md
+            - SHOW PUBLICATIONS: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-publications.md
+            - SHOW PITRS: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-pitrs.md
+            - SHOW ROLES: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-roles.md
+            - SHOW SEQUENCES: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-sequences.md
+            - SHOW STAGE: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-stage.md
+            - SHOW SUBSCRIPTIONS: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-subscriptions.md
+            - SHOW VARIABLES: OmniFabric/Reference/SQL-Reference/Other/SHOW-Statements/show-variables.md
+          - SET:
+            - SET ROLE: OmniFabric/Reference/SQL-Reference/Other/Set/set-role.md
+          - USE:
+            - USE DATABASE: OmniFabric/Reference/SQL-Reference/Other/use-database.md
+          - KILL: OmniFabric/Reference/SQL-Reference/Other/kill.md
+          - Prepared Statements:
+            - PREPARE: OmniFabric/Reference/SQL-Reference/Other/Prepared-Statements/prepare.md
+            - EXECUTE: OmniFabric/Reference/SQL-Reference/Other/Prepared-Statements/execute.md
+            - DEALLOCATE: OmniFabric/Reference/SQL-Reference/Other/Prepared-Statements/deallocate.md
+          - Explain:
+            - EXPLAIN: OmniFabric/Reference/SQL-Reference/Other/Explain/explain.md
+            - EXPLAIN Output Format: OmniFabric/Reference/SQL-Reference/Other/Explain/explain-workflow.md
+            - Explain Analyze: OmniFabric/Reference/SQL-Reference/Other/Explain/explain-analyze.md
+            - Explain Prepared: OmniFabric/Reference/SQL-Reference/Other/Explain/explain-prepared.md
+      - Functions and Operators:
+        - Operators:
+          - Operators Overview: OmniFabric/Reference/Operators/operators-overview.md
+          - INTERVAL: OmniFabric/Reference/Operators/interval.md
+          - OPERATORS:
+            - OPERATORS Overview: OmniFabric/Reference/Operators/operators/operators.md
+            - OPERATORS Precedence: OmniFabric/Reference/Operators/operators/operator-precedence.md
+            - Arithmetic Operators:
+              - Arithmetic Operators Overview: OmniFabric/Reference/Operators/operators/arithmetic-operators/arithmetic-operators-overview.md
+              - '%,MOD': OmniFabric/Reference/Operators/operators/arithmetic-operators/mod.md
+              - '*': OmniFabric/Reference/Operators/operators/arithmetic-operators/multiplication.md
+              - +: OmniFabric/Reference/Operators/operators/arithmetic-operators/addition.md
+              - -: OmniFabric/Reference/Operators/operators/arithmetic-operators/minus.md
+              - -: OmniFabric/Reference/Operators/operators/arithmetic-operators/unary-minus.md
+              - /: OmniFabric/Reference/Operators/operators/arithmetic-operators/division.md
+              - DIV: OmniFabric/Reference/Operators/operators/arithmetic-operators/div.md
+            - Assignment Operators:
+              - Assignment Operators Overview: OmniFabric/Reference/Operators/operators/assignment-operators/assignment-operators-overview.md
+              - =: OmniFabric/Reference/Operators/operators/assignment-operators/equal.md
+            - Bit Functions and Operators:
+              - Bit Functions and Operators Overview: OmniFabric/Reference/Operators/operators/bit-functions-and-operators/bit-functions-and-operators-overview.md
+              - '&': OmniFabric/Reference/Operators/operators/bit-functions-and-operators/bitwise-and.md
+              - '>>': OmniFabric/Reference/Operators/operators/bit-functions-and-operators/right-shift.md
+              - '<<': OmniFabric/Reference/Operators/operators/bit-functions-and-operators/left-shift.md
+              - '^': OmniFabric/Reference/Operators/operators/bit-functions-and-operators/bitwise-xor.md
+              - '|': OmniFabric/Reference/Operators/operators/bit-functions-and-operators/bitwise-or.md
+              - '~': OmniFabric/Reference/Operators/operators/bit-functions-and-operators/bitwise-inversion.md
+            - Cast Functions and Operators:
+              - Cast Functions and Operators Overview: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/cast-functions-and-operators-overview.md
+              - BINARY: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/binary.md
+              - CAST: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/cast.md
+              - CONVERT: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/convert.md
+              - DECODE: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/decode.md
+              - ENCODE: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/encode.md
+              - SERIAL: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/serial.md
+              - SERIAL_FULL: OmniFabric/Reference/Operators/operators/cast-functions-and-operators/serial_full.md
+            - Comparison Functions and Operators:
+              - Comparison Functions and Operators Overview: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/comparison-functions-and-operators-overview.md
+              - '>': OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/greater-than.md
+              - '>=': OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/greater-than-or-equal.md
+              - <: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/less-than.md
+              - <>,!=: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/not-equal.md
+              - <=: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/less-than-or-equal.md
+              - =: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/assign-equal.md
+              - BETWEEN ... AND ...: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/between.md
+              - IN: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/in.md
+              - IS: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/is.md
+              - IS NOT NULL: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/is-not-null.md
+              - IS NULL: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/is-null.md
+              - ILIKE: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/ilike.md
+              - ISNULL: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/function_isnull.md
+              - LIKE: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/like.md
+              - NOT BETWEEN ... AND ...: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/not-between.md
+              - NOT IN: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/not-in.md
+              - NOT LIKE: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/not-like.md
+              - COALESCE: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/coalesce.md
+              - INTERVAL: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/function_interval.md
+              - STRCMP: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/function_strcmp.md
+              - IS NOT: OmniFabric/Reference/Operators/operators/comparison-functions-and-operators/is-not.md
+            - Flow Control Functions:
+              - Flow Control Functions Overview: OmniFabric/Reference/Operators/operators/flow-control-functions/flow-control-functions-overview.md
+              - CASE WHEN: OmniFabric/Reference/Operators/operators/flow-control-functions/case-when.md
+              - IF: OmniFabric/Reference/Operators/operators/flow-control-functions/function_if.md
+              - IFNULL: OmniFabric/Reference/Operators/operators/flow-control-functions/function_ifnull.md
+              - NULLIF: OmniFabric/Reference/Operators/operators/flow-control-functions/function_nullif.md
+            - Logical Operators:
+              - Logical Operators Overview: OmniFabric/Reference/Operators/operators/logical-operators/logical-operators-overview.md
+              - AND,&&: OmniFabric/Reference/Operators/operators/logical-operators/and.md
+              - NOT,!: OmniFabric/Reference/Operators/operators/logical-operators/not.md
+              - OR: OmniFabric/Reference/Operators/operators/logical-operators/or.md
+              - XOR: OmniFabric/Reference/Operators/operators/logical-operators/xor.md
+        - Functions:
+          - OmniFabric Function List: OmniFabric/Reference/Functions-and-Operators/omnifabric-function-list.md
+          - Aggregate Functions:
+            - ANY_VALUE: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/any-value.md
+            - AVG: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/avg.md
+            - BITMAP: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/bitmap.md
+            - BIT_AND: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/bit_and.md
+            - BIT_OR: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/bit_or.md
+            - BIT_XOR: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/bit_xor.md
+            - COUNT: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/count.md
+            - GROUP_CONCAT: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/group-concat.md
+            - MAX: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/max.md
+            - MEDIAN: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/median.md
+            - MIN: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/min.md
+            - STDDEV_POP: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/stddev_pop.md
+            - SUM: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/sum.md
+            - VAR_POP: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/var_pop.md
+            - VARIANCE: OmniFabric/Reference/Functions-and-Operators/Aggregate-Functions/variance.md
+          - Mathematical:
+            - ABS(): OmniFabric/Reference/Functions-and-Operators/Mathematical/abs.md
+            - ACOS(): OmniFabric/Reference/Functions-and-Operators/Mathematical/acos.md
+            - ATAN(): OmniFabric/Reference/Functions-and-Operators/Mathematical/atan.md
+            - CEIL(): OmniFabric/Reference/Functions-and-Operators/Mathematical/ceil.md
+            - CEILING(): OmniFabric/Reference/Functions-and-Operators/Mathematical/ceiling.md
+            - COS(): OmniFabric/Reference/Functions-and-Operators/Mathematical/cos.md
+            - COT(): OmniFabric/Reference/Functions-and-Operators/Mathematical/cot.md
+            - EXP(): OmniFabric/Reference/Functions-and-Operators/Mathematical/exp.md
+            - FLOOR(): OmniFabric/Reference/Functions-and-Operators/Mathematical/floor.md
+            - LN(): OmniFabric/Reference/Functions-and-Operators/Mathematical/ln.md
+            - LOG(): OmniFabric/Reference/Functions-and-Operators/Mathematical/log.md
+            - LOG2(): OmniFabric/Reference/Functions-and-Operators/Mathematical/log2.md
+            - LOG10(): OmniFabric/Reference/Functions-and-Operators/Mathematical/log10.md
+            - PI(): OmniFabric/Reference/Functions-and-Operators/Mathematical/pi.md
+            - POWER(): OmniFabric/Reference/Functions-and-Operators/Mathematical/power.md
+            - ROUND(): OmniFabric/Reference/Functions-and-Operators/Mathematical/round.md
+            - RAND(): OmniFabric/Reference/Functions-and-Operators/Mathematical/rand.md
+            - SIN(): OmniFabric/Reference/Functions-and-Operators/Mathematical/sin.md
+            - SINH(): OmniFabric/Reference/Functions-and-Operators/Mathematical/sinh.md
+            - TAN(): OmniFabric/Reference/Functions-and-Operators/Mathematical/tan.md
+            - CRC32(): OmniFabric/Reference/Functions-and-Operators/Mathematical/crc32.md
+          - String:
+            - BIN(): OmniFabric/Reference/Functions-and-Operators/String/bin.md
+            - BIT_LENGTH(): OmniFabric/Reference/Functions-and-Operators/String/bit-length.md
+            - CHAR_LENGTH(): OmniFabric/Reference/Functions-and-Operators/String/char-length.md
+            - CONCAT(): OmniFabric/Reference/Functions-and-Operators/String/concat.md
+            - CONCAT_WS(): OmniFabric/Reference/Functions-and-Operators/String/concat-ws.md
+            - EMPTY(): OmniFabric/Reference/Functions-and-Operators/String/empty.md
+            - ENDSWITH(): OmniFabric/Reference/Functions-and-Operators/String/endswith.md
+            - FIELD(): OmniFabric/Reference/Functions-and-Operators/String/field.md
+            - FIND_IN_SET(): OmniFabric/Reference/Functions-and-Operators/String/find-in-set.md
+            - FORMAT(): OmniFabric/Reference/Functions-and-Operators/String/format.md
+            - FROM_BASE64(): OmniFabric/Reference/Functions-and-Operators/String/from_base64.md
+            - HEX(): OmniFabric/Reference/Functions-and-Operators/String/hex.md
+            - INSTR(): OmniFabric/Reference/Functions-and-Operators/String/instr.md
+            - LCASE(): OmniFabric/Reference/Functions-and-Operators/String/lcase.md
+            - LEFT(): OmniFabric/Reference/Functions-and-Operators/String/left.md
+            - LENGTH(): OmniFabric/Reference/Functions-and-Operators/String/length.md
+            - LOCATE(): OmniFabric/Reference/Functions-and-Operators/String/locate.md
+            - LOWER(): OmniFabric/Reference/Functions-and-Operators/String/lower.md
+            - LPAD(): OmniFabric/Reference/Functions-and-Operators/String/lpad.md
+            - LTRIM(): OmniFabric/Reference/Functions-and-Operators/String/ltrim.md
+            - MD5(): OmniFabric/Reference/Functions-and-Operators/String/md5.md
+            - OCT(): OmniFabric/Reference/Functions-and-Operators/String/oct.md
+            - REPEAT(): OmniFabric/Reference/Functions-and-Operators/String/repeat.md
+            - REVERSE(): OmniFabric/Reference/Functions-and-Operators/String/reverse.md
+            - RPAD(): OmniFabric/Reference/Functions-and-Operators/String/rpad.md
+            - RTRIM(): OmniFabric/Reference/Functions-and-Operators/String/rtrim.md
+            - SHA1(): OmniFabric/Reference/Functions-and-Operators/String/sha1.md
+            - SHA2(): OmniFabric/Reference/Functions-and-Operators/String/sha2.md
+            - SPACE(): OmniFabric/Reference/Functions-and-Operators/String/space.md
+            - SPLIT_PART(): OmniFabric/Reference/Functions-and-Operators/String/split_part.md
+            - STARTSWITH(): OmniFabric/Reference/Functions-and-Operators/String/startswith.md
+            - SUBSTRING(): OmniFabric/Reference/Functions-and-Operators/String/substring.md
+            - SUBSTRING_INDEX(): OmniFabric/Reference/Functions-and-Operators/String/substring-index.md
+            - TO_BASE64(): OmniFabric/Reference/Functions-and-Operators/String/to_base64.md
+            - TRIM(): OmniFabric/Reference/Functions-and-Operators/String/trim.md
+            - UCASE(): OmniFabric/Reference/Functions-and-Operators/String/ucase.md
+            - UNHEX(): OmniFabric/Reference/Functions-and-Operators/String/unhex.md
+            - UPPER(): OmniFabric/Reference/Functions-and-Operators/String/upper.md
+          - Regular Expressions:
+            - Regular Expression Functions Overview: OmniFabric/Reference/Functions-and-Operators/String/Regular-Expressions/Regular-Expression-Functions-Overview.md
+            - NOT REGEXP: OmniFabric/Reference/Functions-and-Operators/String/Regular-Expressions/not-regexp.md
+            - REGEXP_INSTR: OmniFabric/Reference/Functions-and-Operators/String/Regular-Expressions/regexp-instr.md
+            - REGEXP_LIKE: OmniFabric/Reference/Functions-and-Operators/String/Regular-Expressions/regexp-like.md
+            - REGEXP_REPLACE: OmniFabric/Reference/Functions-and-Operators/String/Regular-Expressions/regexp-replace.md
+            - REGEXP_SUBSTR: OmniFabric/Reference/Functions-and-Operators/String/Regular-Expressions/regexp-substr.md
+          - Datetime:
+            - CONVERT_TZ(): OmniFabric/Reference/Functions-and-Operators/Datetime/convert-tz.md
+            - CURDATE(): OmniFabric/Reference/Functions-and-Operators/Datetime/curdate.md
+            - CURRENT_TIMESTAMP(): OmniFabric/Reference/Functions-and-Operators/Datetime/current-timestamp.md
+            - DATE_ADD(): OmniFabric/Reference/Functions-and-Operators/Datetime/date-add.md
+            - DATE_FORMAT(): OmniFabric/Reference/Functions-and-Operators/Datetime/date-format.md
+            - DATE_SUB(): OmniFabric/Reference/Functions-and-Operators/Datetime/date-sub.md
+            - DATE(): OmniFabric/Reference/Functions-and-Operators/Datetime/date.md
+            - DATEDIFF(): OmniFabric/Reference/Functions-and-Operators/Datetime/datediff.md
+            - DAY(): OmniFabric/Reference/Functions-and-Operators/Datetime/day.md
+            - DAYOFYEAR(): OmniFabric/Reference/Functions-and-Operators/Datetime/dayofyear.md
+            - EXTRACT(): OmniFabric/Reference/Functions-and-Operators/Datetime/extract.md
+            - FROM_UNIXTIME(): OmniFabric/Reference/Functions-and-Operators/Datetime/from-unixtime.md
+            - HOUR(): OmniFabric/Reference/Functions-and-Operators/Datetime/hour.md
+            - MINUTE(): OmniFabric/Reference/Functions-and-Operators/Datetime/minute.md
+            - MONTH(): OmniFabric/Reference/Functions-and-Operators/Datetime/month.md
+            - NOW(): OmniFabric/Reference/Functions-and-Operators/Datetime/now.md
+            - SECOND(): OmniFabric/Reference/Functions-and-Operators/Datetime/second.md
+            - STR_TO_DATE(): OmniFabric/Reference/Functions-and-Operators/Datetime/str-to-date.md
+            - SYSDATE(): OmniFabric/Reference/Functions-and-Operators/Datetime/sysdate.md
+            - TIME(): OmniFabric/Reference/Functions-and-Operators/Datetime/time.md
+            - TIMEDIFF(): OmniFabric/Reference/Functions-and-Operators/Datetime/timediff.md
+            - TIMESTAMP(): OmniFabric/Reference/Functions-and-Operators/Datetime/timestamp.md
+            - TIMESTAMPDIFF(): OmniFabric/Reference/Functions-and-Operators/Datetime/timestampdiff.md
+            - TO_DATE(): OmniFabric/Reference/Functions-and-Operators/Datetime/to-date.md
+            - TO_DAYS(): OmniFabric/Reference/Functions-and-Operators/Datetime/to-days.md
+            - TO_SECONDS(): OmniFabric/Reference/Functions-and-Operators/Datetime/to-seconds.md
+            - UNIX_TIMESTAMP(): OmniFabric/Reference/Functions-and-Operators/Datetime/unix-timestamp.md
+            - UTC_TIMESTAMP(): OmniFabric/Reference/Functions-and-Operators/Datetime/utc-timestamp.md
+            - WEEK(): OmniFabric/Reference/Functions-and-Operators/Datetime/week.md
+            - WEEKDAY(): OmniFabric/Reference/Functions-and-Operators/Datetime/weekday.md
+            - YEAR(): OmniFabric/Reference/Functions-and-Operators/Datetime/year.md
+          - Table:
+            - GENERATE_SERIES(): OmniFabric/Reference/Functions-and-Operators/Table/generate_series.md
+            - UNNEST(): OmniFabric/Reference/Functions-and-Operators/Table/unnest.md
+          - Vector:
+            - Arithemetic Operators: OmniFabric/Reference/Functions-and-Operators/Vector/arithmetic.md
+            - COSINE_SIMILARITY(): OmniFabric/Reference/Functions-and-Operators/Vector/cosine_similarity.md
+            - COSINE_DISTANCE(): OmniFabric/Reference/Functions-and-Operators/Vector/cosine_distance.md
+            - INNER_PRODUCT(): OmniFabric/Reference/Functions-and-Operators/Vector/inner_product.md
+            - L1_NORM(): OmniFabric/Reference/Functions-and-Operators/Vector/l1_norm.md
+            - L2_NORM(): OmniFabric/Reference/Functions-and-Operators/Vector/l2_norm.md
+            - L2_DISTANCE(): OmniFabric/Reference/Functions-and-Operators/Vector/l2_distance.md
+            - Misc Function: OmniFabric/Reference/Functions-and-Operators/Vector/misc.md
+            - VECTOR_DIMS(): OmniFabric/Reference/Functions-and-Operators/Vector/vector_dims.md
+            - NORMALIZE_L2(): OmniFabric/Reference/Functions-and-Operators/Vector/normalize_l2.md
+            - CLUSTER_CENTERS(): OmniFabric/Reference/Functions-and-Operators/Vector/cluster_centers.md
+            - SUBVECTOR(): OmniFabric/Reference/Functions-and-Operators/Vector/subvector.md
+          - Window Functions:
+            - DENSE_RANK(): OmniFabric/Reference/Functions-and-Operators/Window-Functions/dense_rank.md
+            - RANK(): OmniFabric/Reference/Functions-and-Operators/Window-Functions/rank.md
+            - ROW_NUMBER(): OmniFabric/Reference/Functions-and-Operators/Window-Functions/row_number.md
+          - JSON Functions:
+            - JQ(): OmniFabric/Reference/Functions-and-Operators/Json/jq.md
+            - JSON_EXTRACT(): OmniFabric/Reference/Functions-and-Operators/Json/json_extract.md
+            - JSON_EXTRACT_FLOAT64(): OmniFabric/Reference/Functions-and-Operators/Json/json_extract_float64.md
+            - JSON_EXTRACT_STRING(): OmniFabric/Reference/Functions-and-Operators/Json/json_extract_string.md
+            - JSON_QUOTE(): OmniFabric/Reference/Functions-and-Operators/Json/json_quote.md
+            - JSON_ROW(): OmniFabric/Reference/Functions-and-Operators/Json/json_row.md
+            - JSON_SET(): OmniFabric/Reference/Functions-and-Operators/Json/json_set.md
+            - JSON_UNQUOTE(): OmniFabric/Reference/Functions-and-Operators/Json/json_unquote.md
+            - TRY_JQ(): OmniFabric/Reference/Functions-and-Operators/Json/try_jq.md
+          - Other Functions:
+            - SAVE_FILE(): OmniFabric/Reference/Functions-and-Operators/Other/save_file.md
+            - SAMPLE(): OmniFabric/Reference/Functions-and-Operators/Other/sample.md
+            - SERIAL_EXTRACT(): OmniFabric/Reference/Functions-and-Operators/Other/serial_extract.md
+            - SLEEP(): OmniFabric/Reference/Functions-and-Operators/Other/sleep.md
+            - STAGE_LIST(): OmniFabric/Reference/Functions-and-Operators/Other/stage_list.md
+            - UUID(): OmniFabric/Reference/Functions-and-Operators/Other/uuid.md
+            - LOAD_FILE(): OmniFabric/Reference/Functions-and-Operators/Other/load_file.md
+          - System OPS Functions:
+            - CURRENT_ROLE_NAME(): OmniFabric/Reference/Functions-and-Operators/system-ops/current_role_name.md
+            - CURRENT_ROLE(): OmniFabric/Reference/Functions-and-Operators/system-ops/current_role.md
+            - CURRENT_USER_NAME(): OmniFabric/Reference/Functions-and-Operators/system-ops/current_user_name.md
+            - CURRENT_USER(): OmniFabric/Reference/Functions-and-Operators/system-ops/current_user.md
+            - PURGE_LOG(): OmniFabric/Reference/Functions-and-Operators/system-ops/purge_log.md
+            - VERSION(): OmniFabric/Reference/Functions-and-Operators/system-ops/version.md
+      - System Paramaters:
+        - System Parameters Overview: OmniFabric/Reference/System-Parameters/system-parameter.md
+        - Standalone Common Parameters Configuration: OmniFabric/Reference/System-Parameters/standalone-configuration-settings.md
+        - Distributed Common Parameters Configuration: OmniFabric/Reference/System-Parameters/distributed-configuration-settings.md
+        - Configuration Settings: OmniFabric/Reference/System-Parameters/configuration-settings.md
+      - OmniFabric Catalog: OmniFabric/Reference/System-tables.md
+      - MO Tools:
+        - mo_ctl: OmniFabric/Reference/mo-tools/mo_ctl.md
+        - mo_ctl_standalone: OmniFabric/Reference/mo-tools/mo_ctl_standalone.md
+        - mo_datax_writer: OmniFabric/Reference/mo-tools/mo_datax_writer.md
+        - mo_ssb_open: OmniFabric/Reference/mo-tools/mo_ssb_open.md
+        - mo_tpch_open: OmniFabric/Reference/mo-tools/mo_tpch_open.md
+        - mo_ts_perf_test: OmniFabric/Reference/mo-tools/mo_ts_perf_test.md
+    - Release Notes:
+      - Release Timeline: OmniFabric/Release-Notes/release-timeline.md
+      - v25.2.1.0: OmniFabric/Release-Notes/v25.2.1.0.md
+      - v25.2.0.3: OmniFabric/Release-Notes/v25.2.0.3.md
+      - v25.2.0.2: OmniFabric/Release-Notes/v25.2.0.2.md
+      - v24.2.0.1: OmniFabric/Release-Notes/v24.2.0.1.md
+      - v24.2.0.0: OmniFabric/Release-Notes/v24.2.0.0.md
+      - v24.1.2.4: OmniFabric/Release-Notes/v24.1.2.4.md
+      - v24.1.2.3: OmniFabric/Release-Notes/v24.1.2.3.md
+      - v24.1.2.2: OmniFabric/Release-Notes/v24.1.2.2.md
+      - v24.1.2.1: OmniFabric/Release-Notes/v24.1.2.1.md
+      - v24.1.2.0: OmniFabric/Release-Notes/v24.1.2.0.md
+      - v24.1.1.3: OmniFabric/Release-Notes/v24.1.1.3.md
+      - v24.1.1.2: OmniFabric/Release-Notes/v24.1.1.2.md
+      - v24.1.1.1: OmniFabric/Release-Notes/v24.1.1.1.md
+    - Tutorial:
+      - C# .NET CRUD Demo: OmniFabric/Tutorial/c-net-crud-demo.md
+      - Develop Golang CRUD Demo: OmniFabric/Tutorial/develop-golang-crud-demo.md
+      - Develop Java CRUD Demo: OmniFabric/Tutorial/develop-java-crud-demo.md
+      - Develop Python CRUD Demo: OmniFabric/Tutorial/develop-python-crud-demo.md
+      - Django Python CRUD Demo: OmniFabric/Tutorial/django-python-crud-demo.md
+      - RAG Demo: OmniFabric/Tutorial/rag-demo.md
+      - SpringBoot Hibernate CRUD Demo: OmniFabric/Tutorial/springboot-hibernate-crud-demo.md
+      - SpringBoot MyBatis CRUD Demo: OmniFabric/Tutorial/springboot-mybatis-crud-demo.md
+      - SQLAlchemy Python CRUD Demo: OmniFabric/Tutorial/sqlalchemy-python-crud-demo.md
+    - Test:
+      - Testing Tool:
+        - MO Tester: OmniFabric/Test/testing-tool/mo-tester.md
+    - Troubleshooting:
+      - Common Statistics Query: OmniFabric/Troubleshooting/common-statistics-query.md
+      - Error Code: OmniFabric/Troubleshooting/error-code.md
+      - Query Table Statistics: OmniFabric/Troubleshooting/query-table-statistics.md
+      - Slow Queries: OmniFabric/Troubleshooting/slow-queries.md
+    - Glossary: OmniFabric/glossary.md
